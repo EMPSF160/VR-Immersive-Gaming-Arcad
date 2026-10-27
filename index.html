@@ -31,7 +31,7 @@
         <img src="assets/images/logo.svg" alt="NEXUS VR & Audio Arcade Logo" class="brand-logo-img">
       </a>
 
-      <!-- Desktop Navigation Menu -->
+      <!-- Navigation Menu -->
       <nav aria-label="Main Navigation">
         <ul class="nav-menu" id="primary-nav-menu">
           <li><a href="#experiences" class="nav-link">VR Arenas</a></li>
@@ -41,11 +41,30 @@
           <li><a href="#booking" class="nav-link">Book Station</a></li>
           <li><a href="#pricing" class="nav-link">VIP Passes</a></li>
           <li><a href="#faq-reviews" class="nav-link">FAQ &amp; Reviews</a></li>
+
+          <!-- Mobile-only Action Items inside Hamburger Menu (Active on <= 1024px) -->
+          <li class="mobile-menu-actions-item">
+            <div class="mobile-actions-wrapper">
+              <button class="btn btn-sm btn-primary btn-open-auth mobile-action-auth" style="width: 100%;">
+                <span class="user-avatar-indicator"></span>
+                <span class="mobile-auth-label">Sign In / Join</span>
+              </button>
+              <div class="mobile-action-subrow">
+                <button class="mobile-action-btn mobile-cart-trigger" id="mobile-cart-btn" aria-label="Audio &amp; Gear Cart">
+                  <span>🎧 Gear Cart</span>
+                  <span class="cart-badge mobile-cart-badge" style="display: none;">0</span>
+                </button>
+                <button class="mobile-action-btn mobile-admin-trigger" id="mobile-admin-toggle" aria-label="Admin Operations Deck">
+                  <span>⚙️ Admin Deck</span>
+                </button>
+              </div>
+            </div>
+          </li>
         </ul>
       </nav>
 
-      <!-- Nav Action Buttons -->
-      <div class="nav-actions">
+      <!-- Desktop Action Buttons (Visible only on Desktop > 1024px) -->
+      <div class="nav-actions desktop-nav-actions">
         <!-- Admin Dashboard Quick Icon Button -->
         <button class="admin-mode-pill" id="nav-admin-toggle" aria-label="Arcade Operations &amp; Admin Control Deck" title="Arcade Operations &amp; Admin Control Deck">
           <span style="display: flex; align-items: center; justify-content: center; line-height: 1;">⚙️</span>
@@ -62,12 +81,12 @@
           <span class="user-avatar-indicator" id="nav-user-dot"></span>
           <span id="nav-user-label">Sign In / Join</span>
         </button>
-
-        <!-- Mobile Navigation Hamburger -->
-        <button class="mobile-nav-toggle" aria-label="Toggle Navigation Menu">
-          <span>☰</span>
-        </button>
       </div>
+
+      <!-- Mobile Navigation Hamburger (Visible only on Mobile/Tablet <= 1024px) -->
+      <button class="mobile-nav-toggle" aria-label="Toggle Navigation Menu">
+        <span>☰</span>
+      </button>
     </div>
   </header>
 

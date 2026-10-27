@@ -527,6 +527,10 @@ document.addEventListener('DOMContentLoaded', () => {
         cartBadge.textContent = totalItems;
         cartBadge.style.display = totalItems > 0 ? 'flex' : 'none';
       }
+      document.querySelectorAll('.mobile-cart-badge').forEach(b => {
+        b.textContent = totalItems;
+        b.style.display = totalItems > 0 ? 'inline-flex' : 'none';
+      });
 
       if (cartItemsContainer) {
         if (state.cart.length === 0) {
@@ -783,9 +787,15 @@ document.addEventListener('DOMContentLoaded', () => {
         if (authBtnText) authBtnText.textContent = `${state.currentUser.name} (${state.currentUser.role.toUpperCase()})`;
         if (userDot) userDot.style.background = state.currentUser.role === 'admin' ? 'var(--neon-pink)' : 'var(--neon-green)';
         if (adminNavBtn) adminNavBtn.style.display = 'inline-flex';
+        document.querySelectorAll('.mobile-auth-label').forEach(lbl => {
+          lbl.textContent = `${state.currentUser.name} (${state.currentUser.role.toUpperCase()})`;
+        });
       } else {
         if (authBtnText) authBtnText.textContent = 'Sign In / Register';
         if (userDot) userDot.style.background = 'var(--neon-cyan)';
+        document.querySelectorAll('.mobile-auth-label').forEach(lbl => {
+          lbl.textContent = 'Sign In / Join';
+        });
       }
     }
   }
@@ -976,6 +986,30 @@ document.addEventListener('DOMContentLoaded', () => {
       // Close on link click
       document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', () => navMenu.classList.remove('open'));
+      });
+
+      // Mobile Drawer Action Handlers
+      const mobileCartBtn = document.getElementById('mobile-cart-btn');
+      if (mobileCartBtn) {
+        mobileCartBtn.addEventListener('click', () => {
+          navMenu.classList.remove('open');
+          const cartDrawer = document.getElementById('cart-drawer-backdrop');
+          if (cartDrawer) cartDrawer.classList.add('active');
+        });
+      }
+
+      const mobileAdminBtn = document.getElementById('mobile-admin-toggle');
+      if (mobileAdminBtn) {
+        mobileAdminBtn.addEventListener('click', () => {
+          navMenu.classList.remove('open');
+          toggleAdminSection();
+        });
+      }
+
+      document.querySelectorAll('.mobile-action-auth').forEach(btn => {
+        btn.addEventListener('click', () => {
+          navMenu.classList.remove('open');
+        });
       });
     }
 
