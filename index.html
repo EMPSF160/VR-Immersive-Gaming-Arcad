@@ -35,11 +35,12 @@
       <nav aria-label="Main Navigation">
         <ul class="nav-menu" id="primary-nav-menu">
           <li><a href="#experiences" class="nav-link">VR Arenas</a></li>
-          <li><a href="#audio-gear" class="nav-link">Podcast &amp; Audio Gear</a></li>
+          <li><a href="#audio-gear" class="nav-link">Podcast &amp; Audio</a></li>
           <li><a href="#audio-lab" class="nav-link">Spatial Audio Lab</a></li>
+          <li><a href="#tournaments" class="nav-link">Tournaments</a></li>
           <li><a href="#booking" class="nav-link">Book Station</a></li>
           <li><a href="#pricing" class="nav-link">VIP Passes</a></li>
-          <li><a href="#tech-specs" class="nav-link">Hardware Specs</a></li>
+          <li><a href="#faq-reviews" class="nav-link">FAQ &amp; Reviews</a></li>
         </ul>
       </nav>
 
@@ -587,6 +588,168 @@
   </section>
 
   <!-- ==========================================================================
+       SECTION 1 (NEW): ESPORTS TOURNAMENTS & LIVE LEADERBOARD
+       ========================================================================== -->
+  <section class="section-padding" id="tournaments">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">🏆 Tournament Matrix</div>
+        <h2 class="section-title">Esports Arenas &amp; Live Hall of Fame</h2>
+        <p class="section-desc">
+          Compete in ranked weekly VR combat circuits, sim-racing time trials, and live broadcast podcast showdowns with real prize pools.
+        </p>
+      </div>
+
+      <!-- Featured Tournaments Grid -->
+      <div class="tournaments-grid">
+        <!-- Tournament 1 -->
+        <div class="tournament-card">
+          <div class="tournament-header">
+            <div>
+              <span class="badge-tag" style="margin-bottom: 0.4rem;">VR Arena Combat</span>
+              <h3 class="tournament-title">Cyber Strike 4v4 Invitational</h3>
+            </div>
+            <span class="prize-pool-badge">$5,000 Pool</span>
+          </div>
+          <div class="tournament-meta-list">
+            <div class="tournament-meta-item">
+              <span>📍</span> <span>Omni Free-Roam 4K Arena (4,000 sq ft)</span>
+            </div>
+            <div class="tournament-meta-item">
+              <span>📅</span> <span>Every Saturday • 06:00 PM EST</span>
+            </div>
+            <div class="tournament-meta-item">
+              <span>🎮</span> <span>8 Squads Max • Double Elimination</span>
+            </div>
+            <div class="tournament-meta-item">
+              <span>🎙️</span> <span>Live Shoutcasted with Shure SM7B Setup</span>
+            </div>
+          </div>
+          <a href="#booking" class="btn btn-primary" style="width: 100%;">
+            <span>⚡ Register Squad ($120/Team)</span>
+          </a>
+        </div>
+
+        <!-- Tournament 2 -->
+        <div class="tournament-card">
+          <div class="tournament-header">
+            <div>
+              <span class="badge-tag badge-pink" style="margin-bottom: 0.4rem;">Sim-Racing Grand Prix</span>
+              <h3 class="tournament-title">Apex Motion Time-Attack</h3>
+            </div>
+            <span class="prize-pool-badge">$2,500 Pool</span>
+          </div>
+          <div class="tournament-meta-list">
+            <div class="tournament-meta-item">
+              <span>📍</span> <span>Hyper-Drive F1 6-DOF Pneumatic Rig</span>
+            </div>
+            <div class="tournament-meta-item">
+              <span>📅</span> <span>Bi-Weekly Sundays • 04:00 PM EST</span>
+            </div>
+            <div class="tournament-meta-item">
+              <span>🏎️</span> <span>Nürburgring Nordschleife Hot Lap Format</span>
+            </div>
+            <div class="tournament-meta-item">
+              <span>🎥</span> <span>4K Triple-Screen Stream on YouTube/Twitch</span>
+            </div>
+          </div>
+          <a href="#booking" class="btn btn-pink" style="width: 100%;">
+            <span>🏎️ Enter Qualifier ($35/Entry)</span>
+          </a>
+        </div>
+
+        <!-- Tournament 3 -->
+        <div class="tournament-card">
+          <div class="tournament-header">
+            <div>
+              <span class="badge-tag badge-purple" style="margin-bottom: 0.4rem;">Creator Soundstage</span>
+              <h3 class="tournament-title">Podcast Battle Royale</h3>
+            </div>
+            <span class="prize-pool-badge">Hardware Gear</span>
+          </div>
+          <div class="tournament-meta-list">
+            <div class="tournament-meta-item">
+              <span>📍</span> <span>Broadcast Studio Suite (Booth A)</span>
+            </div>
+            <div class="tournament-meta-item">
+              <span>📅</span> <span>Monthly First Friday • 07:00 PM EST</span>
+            </div>
+            <div class="tournament-meta-item">
+              <span>🎙️</span> <span>Live Debate &amp; Dynamic Voice Soundclash</span>
+            </div>
+            <div class="tournament-meta-item">
+              <span>🏆</span> <span>Winner Takes Home Shure SM7B + Rodecaster</span>
+            </div>
+          </div>
+          <a href="#booking" class="btn btn-secondary" style="width: 100%;">
+            <span>🎙️ Reserve Creator Slot</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Live Hall of Fame Leaderboard Table -->
+      <div class="leaderboard-card-wrapper">
+        <div class="leaderboard-header-row">
+          <div>
+            <h3 style="font-size: 1.3rem; color: #ffffff; margin-bottom: 0.2rem;">Live Cyber Arcade Leaderboard</h3>
+            <p style="font-size: 0.84rem; color: var(--text-secondary);">Real-time high scores and lap records across all active simulator rigs</p>
+          </div>
+          <span class="badge-tag" style="background: rgba(0, 255, 136, 0.1); border-color: rgba(0, 255, 136, 0.3); color: var(--neon-green);">● Verified Telemetry</span>
+        </div>
+
+        <div class="admin-table-container">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Gamer Tag / Squad</th>
+                <th>Arena / Station</th>
+                <th>Hardware Rig</th>
+                <th>Score / Lap Time</th>
+                <th>Season Standing</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="rank-badge rank-1">1</span></td>
+                <td><strong style="color: #ffffff;">Valkyrie_X</strong> <span style="font-size: 0.75rem; color: var(--neon-cyan);">[Team Chrono]</span></td>
+                <td>Omni Holo-Arena</td>
+                <td>4K Micro-OLED + Full Haptic</td>
+                <td style="font-family: 'Orbitron'; color: var(--neon-cyan); font-weight: 700;">184,920 Pts</td>
+                <td><span class="badge-tag">Champion</span></td>
+              </tr>
+              <tr>
+                <td><span class="rank-badge rank-2">2</span></td>
+                <td><strong style="color: #ffffff;">Apex_Ghost</strong></td>
+                <td>Hyper-Drive F1 Rig</td>
+                <td>25Nm Direct-Drive Wheel</td>
+                <td style="font-family: 'Orbitron'; color: var(--neon-pink); font-weight: 700;">1:24.318 Lap</td>
+                <td><span class="badge-pink">Grandmaster</span></td>
+              </tr>
+              <tr>
+                <td><span class="rank-badge rank-3">3</span></td>
+                <td><strong style="color: #ffffff;">SoundWave_Dan</strong></td>
+                <td>Broadcast Podcast Suite</td>
+                <td>Shure SM7B + Apollo Twin X</td>
+                <td style="font-family: 'Orbitron'; color: #cf73ff; font-weight: 700;">99.4% Precision</td>
+                <td><span class="badge-purple">Top Audio Creator</span></td>
+              </tr>
+              <tr>
+                <td><span class="rank-badge rank-other">4</span></td>
+                <td><strong style="color: #ffffff;">Neon_Cipher</strong> <span style="font-size: 0.75rem; color: var(--text-muted);">[Solo]</span></td>
+                <td>Zero-G Flight Pod</td>
+                <td>360° Gyro Cockpit</td>
+                <td style="font-family: 'Orbitron'; color: #ffffff; font-weight: 700;">142,500 Pts</td>
+                <td><span style="font-size: 0.8rem; color: var(--text-secondary);">Master Tier</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
        HARDWARE & TECH SPECS TOUR
        ========================================================================== -->
   <section class="section-padding" id="tech-specs">
@@ -630,6 +793,151 @@
           <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
             Dual A/D converters eliminate clipping and distortion, capturing the softest whisper and the loudest shout without gain adjustments.
           </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 2 (NEW): CREATOR REVIEWS & INTERACTIVE STUDIO FAQ HUB
+       ========================================================================== -->
+  <section class="section-padding" id="faq-reviews" style="background: rgba(10, 15, 23, 0.5);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">💬 Community &amp; Intelligence</div>
+        <h2 class="section-title">Creator Testimonials &amp; Studio FAQ</h2>
+        <p class="section-desc">
+          Hear from esports champions, top audio engineers, and weekly podcasters who rely on NEXUS hardware and facilities.
+        </p>
+      </div>
+
+      <!-- Testimonials Grid -->
+      <div class="testimonials-grid">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card">
+          <div class="creator-profile-row">
+            <div class="creator-avatar">SJ</div>
+            <div class="creator-info">
+              <h4>Sarah Jensen</h4>
+              <span class="creator-handle">✓ Twitch Partner (450K)</span>
+            </div>
+          </div>
+          <p class="testimonial-quote">
+            "The Omni Holo-Arena is simply unreal. The tracking has zero drift and the haptic vest actually transfers impact direction accurately. My chat went wild during our squad tournament stream!"
+          </p>
+          <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 0.8rem;">
+            <span style="font-size: 0.78rem; color: var(--text-muted);">Station: Omni Holo-Arena</span>
+            <div class="star-rating">★★★★★</div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card">
+          <div class="creator-profile-row">
+            <div class="creator-avatar" style="background: linear-gradient(135deg, #ff007f, #b026ff);">MV</div>
+            <div class="creator-info">
+              <h4>Marcus Vance</h4>
+              <span class="creator-handle" style="color: var(--neon-pink);">✓ Host, Future Sound Podcast</span>
+            </div>
+          </div>
+          <p class="testimonial-quote">
+            "I record our weekly episodes in the Broadcast Suite. The Shure SM7B signal chain through the RØDECaster Pro II is pristine. The 32-bit float backup means zero clipping even during intense debates."
+          </p>
+          <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 0.8rem;">
+            <span style="font-size: 0.78rem; color: var(--text-muted);">Station: Podcast Studio A</span>
+            <div class="star-rating">★★★★★</div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card">
+          <div class="creator-profile-row">
+            <div class="creator-avatar" style="background: linear-gradient(135deg, #00ff88, #00f3ff);">LO</div>
+            <div class="creator-info">
+              <h4>Liam O'Connor</h4>
+              <span class="creator-handle" style="color: var(--neon-green);">✓ Sim-Racing Champion</span>
+            </div>
+          </div>
+          <p class="testimonial-quote">
+            "The pneumatic 6-DOF motion rig matched with the 25Nm direct-drive wheel delivers the most authentic curb vibrations and braking weight transfer I have felt outside a real GT3 car."
+          </p>
+          <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 0.8rem;">
+            <span style="font-size: 0.78rem; color: var(--text-muted);">Station: Hyper-Drive F1 Rig</span>
+            <div class="star-rating">★★★★★</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive FAQ Accordion -->
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <span class="badge-tag">❓ Frequently Asked Questions</span>
+        <h3 style="font-size: 1.5rem; color: #ffffff; margin-top: 0.5rem;">Everything You Need To Know</h3>
+      </div>
+
+      <div class="faq-accordion-container" id="faq-accordion">
+        <!-- FAQ 1 -->
+        <div class="faq-item active">
+          <button class="faq-question-btn" type="button">
+            <span>Do I need prior VR or studio recording experience to play or podcast?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p class="faq-answer-text">
+              Not at all! Every reservation includes a dedicated technician who assists with headset fitting, haptic calibration, and initial microphone gain staging. Whether it's your first time in VR or you're an experienced audio engineer, our team handles setup so you can dive straight in.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <button class="faq-question-btn" type="button">
+            <span>How do I receive my podcast audio files and 4K video streams after recording?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p class="faq-answer-text">
+              Immediately upon session completion, you can either transfer your uncompressed multitrack 32-bit float WAV stems and 4K ProRes video files to your high-speed USB-C drive at our Tech Desk, or receive an encrypted cloud transfer link within 10 minutes.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <button class="faq-question-btn" type="button">
+            <span>What sanitation and hygiene protocols do you use for VR headsets and mics?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p class="faq-answer-text">
+              Health and hygiene are paramount. All headsets, controllers, and broadcast microphones undergo medical-grade UV-C light sterilization between every single session. We also provide disposable antimicrobial face gaskets and fresh foam microphone pop filters for all guests.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <button class="faq-question-btn" type="button">
+            <span>Can I bring my own games, custom SteamVR avatars, or external audio gear?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p class="faq-answer-text">
+              Yes! Our stations run on open RTX 4090 gaming rigs with high-speed fiber internet. You can securely log into your own Steam or Discord accounts, load custom avatars, or plug in your preferred external audio interface or USB-C stream decks.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+          <button class="faq-question-btn" type="button">
+            <span>What is your cancellation and rescheduling policy?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p class="faq-answer-text">
+              We offer 100% free cancellations or time slot transfers up to 2 hours before your scheduled session. Verified Syndicate members enjoy flexible no-penalty rescheduling at any time.
+            </p>
+          </div>
         </div>
       </div>
     </div>

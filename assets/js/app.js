@@ -1031,6 +1031,20 @@ document.addEventListener('DOMContentLoaded', () => {
   window.renderAdminBookingsTable = renderAdminBookingsTable;
   window.updateAdminKPIs = updateAdminKPIs;
 
+  // --- FAQ ACCORDION ENGINE ---
+  function initFAQ() {
+    document.querySelectorAll('.faq-question-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isActive = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(f => f.classList.remove('active'));
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+  }
+
   // Run modules
   initAudioLab();
   initBookingEngine();
@@ -1038,4 +1052,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initAuth();
   initAdminControls();
   initNavAndModals();
+  initFAQ();
 });
