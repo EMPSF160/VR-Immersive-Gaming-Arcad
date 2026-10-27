@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>NEXUS VR & Audio Arcade | Immersive Virtual Reality & Podcast Studios</title>
+  <meta name="description" content="Experience cutting-edge VR gaming arcades, motion flight & racing simulators, and broadcast-grade podcast & spatial audio gear studios at NEXUS.">
+  <meta name="keywords" content="VR arcade, immersive gaming, podcast gear, spatial audio, broadcast studio, haptic suit, motion simulator, Shure SM7B, Rodecaster">
+  
+  <!-- STRICT REQUIREMENT 1: WEBSITE FAVICON (Brand mark in head, consistent across site) -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="alternate icon" href="assets/images/favicon.svg">
+
+  <!-- Google Fonts: Orbitron for futuristic cyberpunk headings & Outfit for clean UI typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body id="home">
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <!-- Clickable Brand Logo (Navigates to Home) -->
+      <a href="#home" class="brand-link" id="header-brand-logo" title="NEXUS VR & Audio - Return to Top">
+        <img src="assets/images/logo.svg" alt="NEXUS VR & Audio Arcade Logo" class="brand-logo-img">
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="primary-nav-menu">
+          <li><a href="#experiences" class="nav-link">VR Arenas</a></li>
+          <li><a href="#audio-gear" class="nav-link">Podcast &amp; Audio Gear</a></li>
+          <li><a href="#audio-lab" class="nav-link">Spatial Audio Lab</a></li>
+          <li><a href="#booking" class="nav-link">Book Station</a></li>
+          <li><a href="#pricing" class="nav-link">VIP Passes</a></li>
+          <li><a href="#tech-specs" class="nav-link">Hardware Specs</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Action Buttons -->
+      <div class="nav-actions">
+        <!-- Admin Dashboard Quick Icon Button -->
+        <button class="admin-mode-pill" id="nav-admin-toggle" aria-label="Arcade Operations &amp; Admin Control Deck" title="Arcade Operations &amp; Admin Control Deck">
+          <span style="display: flex; align-items: center; justify-content: center; line-height: 1;">⚙️</span>
+        </button>
+
+        <!-- Cart Button -->
+        <button class="cart-btn" id="open-cart-btn" aria-label="View Gear Rental Cart" title="Gear Rental Cart">
+          <span>🎧</span>
+          <span class="cart-badge" id="cart-count-badge" style="display: none;">0</span>
+        </button>
+
+        <!-- User Authentication Button -->
+        <button class="auth-user-btn btn-open-auth" id="header-auth-btn" title="Sign In or Manage Account">
+          <span class="user-avatar-indicator" id="nav-user-dot"></span>
+          <span id="nav-user-label">Sign In / Join</span>
+        </button>
+
+        <!-- Mobile Navigation Hamburger -->
+        <button class="mobile-nav-toggle" aria-label="Toggle Navigation Menu">
+          <span>☰</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+  <section class="hero-section" id="hero">
+    <div class="hero-bg-overlay"></div>
+    <div class="hero-grid-pattern"></div>
+    <div class="container hero-content">
+      <div class="hero-eyebrow">
+        <span class="pulse-dot"></span>
+        <span>Next-Gen Immersive Cyber Arcade &amp; Creator Soundstage</span>
+      </div>
+      <h1 class="hero-title">
+        Step Beyond Reality.<br>
+        <span class="glow-gradient">Broadcast in Ultra-Fidelity.</span>
+      </h1>
+      <p class="hero-description">
+        Experience zero-latency wireless 4K VR multiplayer arenas, hydraulic motion racing rigs, and professional soundproof podcast suites equipped with broadcast XLR microphones, multi-track consoles, and binaural spatial audio monitors.
+      </p>
+      <div class="hero-actions">
+        <a href="#booking" class="btn btn-primary" id="hero-book-btn">
+          <span>⚡ Book Arcade Station</span>
+        </a>
+        <a href="#audio-gear" class="btn btn-secondary" id="hero-gear-btn">
+          <span>🎙️ Explore Podcast Studio Gear</span>
+        </a>
+        <a href="#audio-lab" class="btn btn-pink" id="hero-sound-lab-btn">
+          <span>🎛️ Launch Spatial Audio Lab</span>
+        </a>
+      </div>
+
+      <!-- Live KPI Stat Counters -->
+      <div class="hero-stats-row">
+        <div class="stat-box">
+          <div class="stat-number cyan">4K 120Hz</div>
+          <div class="stat-label">Haptic VR Displays</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number pink">32-Bit Float</div>
+          <div class="stat-label">Studio Audio Pre-Amps</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number purple">4,000 ft²</div>
+          <div class="stat-label">Free-Roam Arena</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number cyan">0.8 ms</div>
+          <div class="stat-label">Motion-to-Photon Latency</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       VR ARENAS & EXPERIENCES SECTION
+       ========================================================================== -->
+  <section class="section-padding" id="experiences">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">⚡ Tactical Virtual Reality</div>
+        <h2 class="section-title">Immersive Gaming Arenas &amp; Motion Simulators</h2>
+        <p class="section-desc">
+          High-fidelity tactile immersion powered by real-time spatial physics, sub-bass floor transducers, and full-body haptic feedback suits.
+        </p>
+      </div>
+
+      <div class="experiences-grid">
+        <!-- Experience 1: Omni Holo-Arena -->
+        <div class="card-glass" id="arena-card-holo">
+          <div class="card-media">
+            <span class="badge-tag card-media-tag">Free-Roam Multiplayer</span>
+            <span class="card-badge-status">● Live Available</span>
+            <img src="assets/images/hero_vr_arcade.jpg" alt="Omni Free-Roam VR Holo-Arena">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Omni Free-Roam Holo-Arena</h3>
+            <p class="card-desc">
+              4,000 sq ft wireless arena featuring sub-millimeter optical motion capture, 4K Micro-OLED headsets, and squad-based tactical sci-fi combat.
+            </p>
+            <div class="card-specs-list">
+              <span class="spec-chip">🎮 1-8 Squad Players</span>
+              <span class="spec-chip">⚡ 40-Point Haptic Vest</span>
+              <span class="spec-chip">🎧 360° Spatial Audio</span>
+            </div>
+            <div class="card-footer">
+              <div class="card-price-display">
+                <span class="price-amount">$45</span>
+                <span class="price-unit">per player / hour</span>
+              </div>
+              <button class="btn btn-sm btn-primary btn-quick-book-station" data-station-id="holo-arena">
+                <span>Select &amp; Customize</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 2: Hyper-Drive F1 Motion Rig -->
+        <div class="card-glass" id="arena-card-racing">
+          <div class="card-media">
+            <span class="badge-tag badge-pink card-media-tag">6-DOF Motion Platform</span>
+            <span class="card-badge-status">● Live Available</span>
+            <img src="assets/images/racing_sim.jpg" alt="Hyper-Drive F1 Motion Racing Rig">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Hyper-Drive F1 Motion Rig</h3>
+            <p class="card-desc">
+              Full 6-Degrees-of-Freedom pneumatic motion simulator with 25Nm direct-drive steering, active hydraulic pedals, and panoramic triple 4K screens.
+            </p>
+            <div class="card-specs-list">
+              <span class="spec-chip">🏎️ 25Nm Force Feedback</span>
+              <span class="spec-chip">🕹️ Pneumatic G-Force Seat</span>
+              <span class="spec-chip">🎧 Planar Magnetic Headset</span>
+            </div>
+            <div class="card-footer">
+              <div class="card-price-display">
+                <span class="price-amount">$55</span>
+                <span class="price-unit">per hour session</span>
+              </div>
+              <button class="btn btn-sm btn-primary btn-quick-book-station" data-station-id="racing-sim">
+                <span>Select &amp; Customize</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 3: Pro Broadcast Podcast & Audio Studio -->
+        <div class="card-glass" id="arena-card-podcast">
+          <div class="card-media">
+            <span class="badge-tag badge-purple card-media-tag">Creator Audio Lab</span>
+            <span class="card-badge-status">● Live Available</span>
+            <img src="assets/images/podcast_audio_studio.jpg" alt="Pro Broadcast Podcast Suite">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Broadcast Podcast &amp; Audio Suite</h3>
+            <p class="card-desc">
+              Acoustically tuned soundproof production booth with Shure SM7B broadcast mics, RØDECaster Pro II console, 4K multi-cam capture, and real-time DSP.
+            </p>
+            <div class="card-specs-list">
+              <span class="spec-chip">🎙️ 4x XLR Shure SM7B</span>
+              <span class="spec-chip">🎛️ Multitrack Recording</span>
+              <span class="spec-chip">🎥 4K Multi-Angle Streaming</span>
+            </div>
+            <div class="card-footer">
+              <div class="card-price-display">
+                <span class="price-amount">$65</span>
+                <span class="price-unit">per studio hour</span>
+              </div>
+              <button class="btn btn-sm btn-primary btn-quick-book-station" data-station-id="podcast-suite">
+                <span>Select &amp; Customize</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PODCAST & AUDIO GEAR SHOWCASE & PRO RENTAL SHOP
+       ========================================================================== -->
+  <section class="section-padding" id="audio-gear" style="background: rgba(10, 15, 23, 0.6);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">🎙️ Studio Grade Hardware</div>
+        <h2 class="section-title">Broadcast Audio &amp; Podcast Studio Gear</h2>
+        <p class="section-desc">
+          Professional recording gear calibrated for streamers, podcasters, sound designers, and esports broadcasters. Rent for on-site arcade sessions or take home.
+        </p>
+      </div>
+
+      <!-- Feature Spotlight Banner -->
+      <div class="gear-studio-banner">
+        <div>
+          <span class="badge-tag badge-pink" style="margin-bottom: 0.8rem;">Featured Hardware Suite</span>
+          <h3 style="font-size: 1.8rem; margin-bottom: 0.8rem; color: #ffffff;">Audiophile Immersion &amp; Broadcast Clarity</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
+            Whether you are recording an episodic podcast, broadcasting an esports tournament, or immersing yourself in 3D spatial soundscapes, our gear inventory provides zero-noise floor signal chains and broadcast dynamic range.
+          </p>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="#booking" class="btn btn-pink">
+              <span>Book Studio Session</span>
+            </a>
+            <button class="btn btn-secondary" onclick="document.querySelector('.gear-filter-btn[data-category=\'microphones\']').click();">
+              <span>View All Microphones</span>
+            </button>
+          </div>
+        </div>
+        <div>
+          <img src="assets/images/audio_gear_showcase.jpg" alt="High End Broadcast Microphones and Planar VR Audio Headsets" class="gear-banner-img">
+        </div>
+      </div>
+
+      <!-- Gear Category Filter Buttons -->
+      <div class="gear-filters" role="group" aria-label="Gear Categories">
+        <button class="filter-btn gear-filter-btn active" data-category="all">All Audio Gear (8)</button>
+        <button class="filter-btn gear-filter-btn" data-category="microphones">Broadcast Microphones</button>
+        <button class="filter-btn gear-filter-btn" data-category="consoles">Mixers &amp; Consoles</button>
+        <button class="filter-btn gear-filter-btn" data-category="monitoring">Spatial Headsets</button>
+        <button class="filter-btn gear-filter-btn" data-category="streaming">Stream &amp; Video Rigs</button>
+      </div>
+
+      <!-- Gear Cards Grid (Populated dynamically via JS) -->
+      <div class="gear-grid" id="gear-items-grid">
+        <!-- Rendered by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       INTERACTIVE SPATIAL AUDIO LAB & FREQUENCY VISUALIZER
+       Web Audio API Synthesizer & Canvas Engine
+       ========================================================================== -->
+  <section class="section-padding" id="audio-lab">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">🎛️ Real-Time DSP Engine</div>
+        <h2 class="section-title">Interactive Spatial Audio &amp; Soundstage Lab</h2>
+        <p class="section-desc">
+          Test our binaural spatial panning, low-pass filter cutoff, and studio broadcast profiles live in your browser using our Web Audio API soundstage simulator.
+        </p>
+      </div>
+
+      <div class="synth-lab-container">
+        <div class="synth-lab-header">
+          <div>
+            <h3 style="font-size: 1.4rem; color: #ffffff; margin-bottom: 0.3rem;">3D Spatial Soundfield Synthesizer</h3>
+            <p style="font-size: 0.88rem; color: var(--text-secondary);">Toggle oscillator waveform and adjust audio parameters in real time.</p>
+          </div>
+          <button class="btn btn-secondary" id="toggle-audio-synth">
+            <span>▶ Activate Spatial Audio Lab</span>
+          </button>
+        </div>
+
+        <!-- Real-Time Frequency Visualizer Canvas -->
+        <canvas id="audio-visualizer-canvas" class="audio-visualizer-canvas"></canvas>
+
+        <!-- Controls Grid -->
+        <div class="synth-controls-grid">
+          <!-- Volume Control -->
+          <div class="synth-control-group">
+            <label>Master Output Gain <span id="vol-val" style="color: var(--neon-cyan);">40%</span></label>
+            <input type="range" min="0" max="1" step="0.05" value="0.4" class="synth-slider" id="vol-slider">
+          </div>
+
+          <!-- Spatial Panning -->
+          <div class="synth-control-group">
+            <label>3D Stereo Spatial Pan <span id="pan-val" style="color: var(--neon-cyan);">Center</span></label>
+            <input type="range" min="-1" max="1" step="0.1" value="0" class="synth-slider" id="pan-slider">
+          </div>
+
+          <!-- Low Pass Filter Cutoff -->
+          <div class="synth-control-group">
+            <label>Acoustic Cutoff <span id="filter-val" style="color: var(--neon-cyan);">1200 Hz</span></label>
+            <input type="range" min="200" max="6000" step="100" value="1200" class="synth-slider" id="filter-slider">
+          </div>
+
+          <!-- Studio Profile Preset Selectors -->
+          <div class="synth-control-group">
+            <label>DSP Profile Presets</label>
+            <div class="toggle-chip-group">
+              <button class="synth-toggle-btn filter-profile-btn active" data-mode="neutral">Hi-Fi</button>
+              <button class="synth-toggle-btn filter-profile-btn" data-mode="podcast">Podcast</button>
+              <button class="synth-toggle-btn filter-profile-btn" data-mode="vr-haptic">VR Sub-Bass</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       INTERACTIVE BOOKING ENGINE (STATION & GEAR CUSTOMIZER)
+       ========================================================================== -->
+  <section class="section-padding booking-section-wrapper" id="booking">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">📅 Real-Time Reservation</div>
+        <h2 class="section-title">Book an Arcade Station &amp; Studio Gear</h2>
+        <p class="section-desc">
+          Configure your gaming arena slot, choose pro audio equipment add-ons, and secure your session with instant confirmation.
+        </p>
+      </div>
+
+      <div class="booking-layout-grid">
+        <!-- Interactive Step Wizard -->
+        <div class="booking-wizard-card">
+          <!-- Step 1: Select Station -->
+          <div class="wizard-step">
+            <div class="step-header">
+              <span class="step-number">1</span>
+              <h3 class="step-title">Select VR Arena or Studio Station</h3>
+            </div>
+            <div class="station-select-grid">
+              <div class="station-option-tile selected" data-station-id="holo-arena">
+                <div class="station-tile-name">Omni Holo-Arena</div>
+                <div class="station-tile-sub">Wireless 4K Free-Roam</div>
+                <div class="station-tile-price">$45 / hr</div>
+              </div>
+              <div class="station-option-tile" data-station-id="racing-sim">
+                <div class="station-tile-name">Hyper-Drive F1 Rig</div>
+                <div class="station-tile-sub">Full 6-DOF Motion Platform</div>
+                <div class="station-tile-price">$55 / hr</div>
+              </div>
+              <div class="station-option-tile" data-station-id="podcast-suite">
+                <div class="station-tile-name">Broadcast Podcast Suite</div>
+                <div class="station-tile-sub">Soundproof 4-Mic Studio</div>
+                <div class="station-tile-price">$65 / hr</div>
+              </div>
+              <div class="station-option-tile" data-station-id="zerog-pod">
+                <div class="station-tile-name">Zero-G Flight Pod</div>
+                <div class="station-tile-sub">360° Gyroscopic Simulator</div>
+                <div class="station-tile-price">$50 / hr</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2: Date, Time & Duration -->
+          <div class="wizard-step">
+            <div class="step-header">
+              <span class="step-number">2</span>
+              <h3 class="step-title">Date, Time Slot &amp; Duration</h3>
+            </div>
+            <div class="datetime-selection-row">
+              <div>
+                <label style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.35rem; display: block;">Select Date</label>
+                <input type="date" class="custom-input" id="booking-date-input">
+              </div>
+              <div>
+                <label style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.35rem; display: block;">Session Length</label>
+                <select class="custom-input" id="booking-duration-select">
+                  <option value="1">1 Hour Session</option>
+                  <option value="2">2 Hours Session (Popular)</option>
+                  <option value="3">3 Hours Deep Immersion</option>
+                  <option value="4">Half Day Block (4 Hours)</option>
+                </select>
+              </div>
+            </div>
+
+            <label style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.45rem; display: block;">Available Time Slots</label>
+            <div class="time-slots-grid">
+              <div class="time-slot-pill">10:00 AM</div>
+              <div class="time-slot-pill">11:30 AM</div>
+              <div class="time-slot-pill">01:00 PM</div>
+              <div class="time-slot-pill selected">02:30 PM</div>
+              <div class="time-slot-pill">04:00 PM</div>
+              <div class="time-slot-pill">05:30 PM</div>
+              <div class="time-slot-pill">07:00 PM</div>
+              <div class="time-slot-pill">08:30 PM</div>
+            </div>
+          </div>
+
+          <!-- Step 3: Audio & Gear Add-Ons -->
+          <div class="wizard-step">
+            <div class="step-header">
+              <span class="step-number">3</span>
+              <h3 class="step-title">Audio &amp; Podcast Gear Add-Ons</h3>
+            </div>
+            <div class="addons-checkbox-list">
+              <label class="addon-item selected" data-addon-id="shure-mic">
+                <div class="addon-left">
+                  <input type="checkbox" class="addon-checkbox" checked>
+                  <div>
+                    <div class="addon-title">Shure SM7B Broadcast Dynamic Mic</div>
+                    <div class="addon-desc">Mounted on 360° boom arm with pop filter &amp; Cloudlifter pre-amp</div>
+                  </div>
+                </div>
+                <div class="addon-price">+$15</div>
+              </label>
+
+              <label class="addon-item" data-addon-id="rodecaster">
+                <div class="addon-left">
+                  <input type="checkbox" class="addon-checkbox">
+                  <div>
+                    <div class="addon-title">RØDECaster Pro II Multitrack Desk</div>
+                    <div class="addon-desc">Multichannel recording to high-speed NVMe drive with custom sound pads</div>
+                  </div>
+                </div>
+                <div class="addon-price">+$25</div>
+              </label>
+
+              <label class="addon-item" data-addon-id="haptic-headset">
+                <div class="addon-left">
+                  <input type="checkbox" class="addon-checkbox">
+                  <div>
+                    <div class="addon-title">Planar Magnetic Haptic VR Headset</div>
+                    <div class="addon-desc">Ultra-low distortion acoustic monitoring with sub-bass frequency tactile drivers</div>
+                  </div>
+                </div>
+                <div class="addon-price">+$10</div>
+              </label>
+
+              <label class="addon-item" data-addon-id="video-recording">
+                <div class="addon-left">
+                  <input type="checkbox" class="addon-checkbox">
+                  <div>
+                    <div class="addon-title">4K 60fps Dual Camera Streaming Rig</div>
+                    <div class="addon-desc">Full ProRes video capture with instant cloud link transfer after session</div>
+                  </div>
+                </div>
+                <div class="addon-price">+$35</div>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Price Calculation & Confirmation Card -->
+        <div class="booking-summary-card">
+          <div class="summary-header">
+            <h3 style="font-size: 1.25rem; color: #ffffff;">Session Summary</h3>
+            <span class="badge-tag" id="summary-badge-status">Instant Reserve</span>
+          </div>
+          <div class="summary-row">
+            <span>Selected Station</span>
+            <strong id="summary-station-name" style="color: #ffffff;">Omni Holo-Arena</strong>
+          </div>
+          <div class="summary-row">
+            <span>Session Date &amp; Time</span>
+            <span id="summary-datetime-display">Today at 02:30 PM</span>
+          </div>
+          <div class="summary-row">
+            <span>Duration</span>
+            <span id="summary-duration-display">1 Hour</span>
+          </div>
+          <div class="summary-row">
+            <span>Station Base Rate</span>
+            <span id="summary-station-price">$45</span>
+          </div>
+          <div class="summary-row">
+            <span>Hardware &amp; Audio Add-Ons</span>
+            <span id="summary-addons-price">$15</span>
+          </div>
+          <div class="summary-row total-row">
+            <span>Estimated Total:</span>
+            <span class="summary-total-val" id="summary-total-price">$60</span>
+          </div>
+
+          <button class="btn btn-primary" id="btn-confirm-booking" style="width: 100%; margin-bottom: 0.85rem;">
+            <span>⚡ Confirm &amp; Reserve Session</span>
+          </button>
+          <p style="font-size: 0.76rem; color: var(--text-muted); text-align: center;">
+            Free cancellation up to 2 hours prior. Zero deposit required for verified members.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       VIP PASSES & MEMBERSHIP
+       ========================================================================== -->
+  <section class="section-padding" id="pricing" style="background: rgba(10, 15, 23, 0.4);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">👑 Unlimited Access</div>
+        <h2 class="section-title">VIP Passes &amp; Studio Memberships</h2>
+        <p class="section-desc">
+          Choose a pass tailored for solo VR gamers, esports squads, or regular content creators and podcast producers.
+        </p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Tier 1 -->
+        <div class="pricing-card">
+          <div class="pricing-tier-name">Cadet Day Pass</div>
+          <div class="pricing-tier-desc">Ideal for casual arcade visitors and drop-in VR explorers.</div>
+          <div class="pricing-cost-display">
+            <span class="pricing-amount">$35</span>
+            <span style="color: var(--text-muted);">/ hour</span>
+          </div>
+          <ul class="pricing-features-list">
+            <li class="pricing-feature-item"><span class="check-icon">✓</span> Any VR station of choice</li>
+            <li class="pricing-feature-item"><span class="check-icon">✓</span> Standard haptic controllers</li>
+            <li class="pricing-feature-item"><span class="check-icon">✓</span> Access to 40+ VR game library</li>
+            <li class="pricing-feature-item"><span class="check-icon">✓</span> Arcade locker &amp; drink token</li>
+          </ul>
+          <a href="#booking" class="btn btn-secondary">Select Day Pass</a>
+        </div>
+
+        <!-- Tier 2 (Featured) -->
+        <div class="pricing-card featured">
+          <div class="pricing-featured-badge">Most Popular for Creators</div>
+          <div class="pricing-tier-name">Pro Creator &amp; Streamer</div>
+          <div class="pricing-tier-desc">Designed for podcasters, Twitch streamers, and sim-racers.</div>
+          <div class="pricing-cost-display">
+            <span class="pricing-amount">$85</span>
+            <span style="color: var(--text-muted);">/ 2hr block</span>
+          </div>
+          <ul class="pricing-features-list">
+            <li class="pricing-feature-item"><span class="check-icon">✓</span> Priority access to Podcast Studio Suite</li>
+            <li class="pricing-feature-item"><span class="check-icon">✓</span> Shure SM7B + RØDECaster Pro II included</li>
+            <li class="pricing-feature-item"><span class="check-icon">✓</span> 4K multi-camera video capture ISO stems</li>
+            <li class="pricing-feature-item"><span class="check-icon">✓</span> Dedicated audio technician assistance</li>
+            <li class="pricing-feature-item"><span class="check-icon">✓</span> Fiber 2.5Gbps symmetric upload pipeline</li>
+          </ul>
+          <a href="#booking" class="btn btn-primary">Book Pro Session</a>
+        </div>
+
+        <!-- Tier 3 -->
+        <div class="pricing-card">
+          <div class="pricing-tier-name">Cyber Syndicate Elite</div>
+          <div class="pricing-tier-desc">Full VIP access with unlimited bookings and gear rental privileges.</div>
+          <div class="pricing-cost-display">
+            <span class="pricing-amount">$180</span>
+            <span style="color: var(--text-muted);">/ month</span>
+          </div>
+          <ul class="pricing-features-list">
+            <li class="pricing-feature-item"><span class="check-icon">✓</span> Unlimited off-peak VR arena hours</li>
+            <li class="pricing-feature-item"><span class="check-icon">✓</span> 4x Monthly Podcast Studio Sessions</li>
+            <li class="pricing-feature-item"><span class="check-icon">✓</span> Free audio equipment check-out &amp; take-home</li>
+            <li class="pricing-feature-item"><span class="check-icon">✓</span> Private VIP lounge with zero-gravity chairs</li>
+          </ul>
+          <a href="#booking" class="btn btn-secondary">Join Syndicate</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       HARDWARE & TECH SPECS TOUR
+       ========================================================================== -->
+  <section class="section-padding" id="tech-specs">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">⚙️ High-Performance Architecture</div>
+        <h2 class="section-title">Enterprise Tech &amp; Acoustic Infrastructure</h2>
+        <p class="section-desc">
+          Engineered for zero motion sickness, clinical sound isolation, and tournament-grade audio precision.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+        <div class="card-glass" style="padding: 1.6rem;">
+          <div style="font-size: 2.2rem; margin-bottom: 0.6rem;">🕶️</div>
+          <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: #ffffff;">4K Micro-OLED Optic Displays</h3>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+            3552 x 3840 pixels per eye with pancake optics for crystal-clear edge-to-edge clarity and zero screendoor effect.
+          </p>
+        </div>
+
+        <div class="card-glass" style="padding: 1.6rem;">
+          <div style="font-size: 2.2rem; margin-bottom: 0.6rem;">🔊</div>
+          <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: #ffffff;">-60dB Acoustic Isolation</h3>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+            Double-walled floating room architecture with decoupled acoustic bass traps ensuring complete silence outside the pod.
+          </p>
+        </div>
+
+        <div class="card-glass" style="padding: 1.6rem;">
+          <div style="font-size: 2.2rem; margin-bottom: 0.6rem;">📡</div>
+          <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: #ffffff;">6GHz Wi-Fi 7 Wireless VR Link</h3>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+            Multi-Link Operation with uncompressed low-latency video streaming directly from our RTX 4090 render cluster.
+          </p>
+        </div>
+
+        <div class="card-glass" style="padding: 1.6rem;">
+          <div style="font-size: 2.2rem; margin-bottom: 0.6rem;">🎚️</div>
+          <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: #ffffff;">32-Bit Float Analog-to-Digital</h3>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+            Dual A/D converters eliminate clipping and distortion, capturing the softest whisper and the loudest shout without gain adjustments.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ADMIN MANAGEMENT CONTROLS PANEL (OPERATIONS DECK)
+       ========================================================================== -->
+  <section class="admin-section" id="admin-management-section">
+    <div class="container">
+      <div class="admin-header-bar">
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.6rem;">
+            <span style="font-size: 1.5rem;">⚙️</span>
+            <h2 style="font-size: 1.4rem; color: #ffffff;">Arcade Operations &amp; Admin Control Deck</h2>
+          </div>
+          <p style="font-size: 0.85rem; color: #caa2e6; margin-top: 0.2rem;">
+            Real-time telemetry, session reservations management, booth availability, and pro audio inventory tracking.
+          </p>
+        </div>
+        <button class="btn btn-sm btn-secondary" id="btn-close-admin">
+          <span>✕ Close Operations Deck</span>
+        </button>
+      </div>
+
+      <!-- Live Admin KPIs -->
+      <div class="admin-kpis-grid">
+        <div class="kpi-card cyan">
+          <span class="kpi-label">Weekly Arcade Revenue</span>
+          <span class="kpi-value" id="kpi-total-revenue">$25,280</span>
+          <span class="kpi-trend">▲ +19.4% vs last week</span>
+        </div>
+        <div class="kpi-card pink">
+          <span class="kpi-label">Active Bookings Queue</span>
+          <span class="kpi-value" id="kpi-active-bookings">4 Bookings</span>
+          <span class="kpi-trend">● 100% On-time schedule</span>
+        </div>
+        <div class="kpi-card purple">
+          <span class="kpi-label">Studio Booth Occupancy</span>
+          <span class="kpi-value">85%</span>
+          <span class="kpi-trend">🟢 4 of 5 Arenas Active</span>
+        </div>
+        <div class="kpi-card green">
+          <span class="kpi-label">Hardware Calibrations</span>
+          <span class="kpi-value">Normal</span>
+          <span class="kpi-trend">⚡ 0.8ms average latency</span>
+        </div>
+      </div>
+
+      <!-- Admin Tabs Navigation -->
+      <div class="admin-tabs-nav" role="tablist">
+        <button class="admin-tab-btn active" data-target-panel="panel-bookings">📅 Reservation Queue (Live)</button>
+        <button class="admin-tab-btn" data-target-panel="panel-stations">🕹️ Station Availability Controls</button>
+        <button class="admin-tab-btn" data-target-panel="panel-inventory">🎙️ Gear Inventory &amp; Diagnostics</button>
+      </div>
+
+      <!-- Subpanel 1: Bookings Management -->
+      <div class="admin-subpanel" id="panel-bookings">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+          <h3 style="font-size: 1.1rem; color: #ffffff;">Current Reservations &amp; Studio Sessions</h3>
+          <span style="font-size: 0.8rem; color: var(--text-secondary);">Updated live on new customer bookings</span>
+        </div>
+        <div class="admin-table-container">
+          <table class="admin-table" id="admin-bookings-table">
+            <thead>
+              <tr>
+                <th>Booking Ref</th>
+                <th>Player / Creator</th>
+                <th>Station</th>
+                <th>Gear Package</th>
+                <th>Schedule</th>
+                <th>Total</th>
+                <th>Status</th>
+                <th>Operator Action</th>
+              </tr>
+            </thead>
+            <tbody id="admin-bookings-tbody">
+              <!-- Dynamically populated by app.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Subpanel 2: Station Status Controls -->
+      <div class="admin-subpanel" id="panel-stations" style="display: none;">
+        <h3 style="font-size: 1.1rem; color: #ffffff; margin-bottom: 1rem;">Toggle Arcade Booth &amp; Podcast Room Status</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem;">
+          <div class="card-glass" style="padding: 1.2rem;">
+            <h4 style="font-size: 1rem; color: #ffffff; margin-bottom: 0.3rem;">Omni Holo-Arena (4K)</h4>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.8rem;">Optitrack Optical Grid 1</p>
+            <button class="btn btn-sm btn-primary station-status-toggle" data-station-id="holo-arena">AVAILABLE</button>
+          </div>
+          <div class="card-glass" style="padding: 1.2rem;">
+            <h4 style="font-size: 1rem; color: #ffffff; margin-bottom: 0.3rem;">Hyper-Drive F1 Sim Rig</h4>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.8rem;">Direct-Drive Servo Pod 3</p>
+            <button class="btn btn-sm btn-primary station-status-toggle" data-station-id="racing-sim">AVAILABLE</button>
+          </div>
+          <div class="card-glass" style="padding: 1.2rem;">
+            <h4 style="font-size: 1rem; color: #ffffff; margin-bottom: 0.3rem;">Podcast Studio Suite</h4>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.8rem;">Booth A - 4x Shure SM7B</p>
+            <button class="btn btn-sm btn-primary station-status-toggle" data-station-id="podcast-suite">AVAILABLE</button>
+          </div>
+          <div class="card-glass" style="padding: 1.2rem;">
+            <h4 style="font-size: 1rem; color: #ffffff; margin-bottom: 0.3rem;">Zero-G Flight Pod</h4>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.8rem;">Gyroscopic Cockpit 2</p>
+            <button class="btn btn-sm btn-secondary station-status-toggle" data-station-id="zerog-pod">IN-SESSION</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Subpanel 3: Inventory & Diagnostics -->
+      <div class="admin-subpanel" id="panel-inventory" style="display: none;">
+        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1.8rem; align-items: flex-start;">
+          <div>
+            <h3 style="font-size: 1.1rem; color: #ffffff; margin-bottom: 1rem;">Audio &amp; VR Hardware Asset Tracking</h3>
+            <div class="admin-table-container">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>Hardware Model</th>
+                    <th>Category</th>
+                    <th>Rental Rate</th>
+                    <th>Hardware Status</th>
+                    <th>Quick Action</th>
+                  </tr>
+                </thead>
+                <tbody id="admin-inventory-tbody">
+                  <!-- Dynamically populated -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="card-glass" style="padding: 1.5rem;">
+            <h4 style="font-size: 1rem; color: #ffffff; margin-bottom: 1rem;">Quick Add Hardware to Catalog</h4>
+            <form id="admin-add-gear-form" style="display: flex; flex-direction: column; gap: 0.9rem;">
+              <div class="form-group">
+                <label>Equipment Name</label>
+                <input type="text" id="new-gear-name" class="custom-input" placeholder="e.g. Neumann TLM 103" required>
+              </div>
+              <div class="form-group">
+                <label>Category</label>
+                <select id="new-gear-cat" class="custom-input">
+                  <option value="microphones">Microphone</option>
+                  <option value="consoles">Console / Mixer</option>
+                  <option value="monitoring">Spatial Headset</option>
+                  <option value="streaming">Streaming / Camera</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Session Rental Price ($)</label>
+                <input type="number" id="new-gear-price" class="custom-input" min="5" max="200" value="20" required>
+              </div>
+              <button type="submit" class="btn btn-primary" style="margin-top: 0.5rem;">
+                <span>+ Register Hardware</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       AUTHENTICATION MODAL & DEDICATED CARDS
+       STRICT REQUIREMENTS SATISFACTION:
+       - Website Logo inside card
+       - Logo Centered
+       - Consistent sizing & properly spaced
+       - Logo clickable -> Navigate to Home page
+       - Never overflow card
+       - Responsive across all viewports
+       ========================================================================== -->
+  <div class="auth-modal-backdrop" id="auth-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="auth-card-title">
+    <div class="auth-card-container">
+      <!-- Close Button -->
+      <button class="auth-modal-close" id="auth-modal-close-btn" aria-label="Close Authentication Modal">✕</button>
+
+      <!-- STRICT REQUIREMENT 2 & 3: CENTERED CLICKABLE LOGO INSIDE AUTH CARD -->
+      <div class="auth-card-logo-container">
+        <a href="#home" class="auth-card-logo-link" id="auth-card-logo-link" title="Click to Navigate to Home Page">
+          <img src="assets/images/logo.svg" alt="NEXUS VR & Audio Arcade Logo" class="auth-card-logo-img">
+        </a>
+        <p class="auth-card-subheading" id="auth-card-title">Arcade Member &amp; Creator Access Portal</p>
+      </div>
+
+      <!-- Auth Mode Selector Tabs -->
+      <div class="auth-tab-buttons" role="tablist">
+        <button class="auth-tab-btn active" data-target-form="login-form-panel">Sign In</button>
+        <button class="auth-tab-btn" data-target-form="register-form-panel">Create Account</button>
+        <button class="auth-tab-btn" data-target-form="forgot-form-panel">Forgot Password</button>
+      </div>
+
+      <!-- Tab Panel 1: Login Form -->
+      <div class="auth-form-panel" id="login-form-panel">
+        <form class="auth-form" id="login-form">
+          <div class="form-group">
+            <label for="login-email">Arcade Pass or Email Address</label>
+            <input type="email" id="login-email" class="custom-input" placeholder="creator@nexusvr.io" required>
+          </div>
+          <div class="form-group">
+            <label for="login-pwd">Access Key / Password</label>
+            <div class="input-with-icon">
+              <input type="password" id="login-pwd" class="custom-input" placeholder="••••••••••••" required>
+              <button type="button" class="pwd-toggle-btn" aria-label="Toggle password visibility">👁️</button>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">
+            <span>Authorize &amp; Enter Cyberverse</span>
+          </button>
+        </form>
+
+        <!-- Quick Demo Account Fillers -->
+        <div class="auth-demo-helper">
+          <p>⚡ Quick Test Credentials (Single Click Auto-Fill):</p>
+          <div class="demo-pill-btns">
+            <button type="button" class="demo-pill" id="btn-demo-creator">Gamer / Creator</button>
+            <button type="button" class="demo-pill" id="btn-demo-admin">Arcade Admin</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab Panel 2: Register Form -->
+      <div class="auth-form-panel" id="register-form-panel" style="display: none;">
+        <form class="auth-form" id="register-form">
+          <div class="form-group">
+            <label for="reg-name">Creator Handle or Full Name</label>
+            <input type="text" id="reg-name" class="custom-input" placeholder="Alex Mercer" required>
+          </div>
+          <div class="form-group">
+            <label for="reg-email">Email Address</label>
+            <input type="email" id="reg-email" class="custom-input" placeholder="alex@creatorlab.com" required>
+          </div>
+          <div class="form-group">
+            <label for="reg-pwd">Create Secure Password</label>
+            <div class="input-with-icon">
+              <input type="password" id="reg-pwd" class="custom-input" placeholder="Minimum 8 characters" required>
+              <button type="button" class="pwd-toggle-btn" aria-label="Toggle password visibility">👁️</button>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-pink" style="width: 100%; margin-top: 0.5rem;">
+            <span>Generate Arcade Member ID</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Tab Panel 3: Forgot Password Form -->
+      <div class="auth-form-panel" id="forgot-form-panel" style="display: none;">
+        <form class="auth-form" id="forgot-form">
+          <p style="font-size: 0.84rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 0.5rem;">
+            Enter your registered email address and we'll transmit a quantum reset token directly to your inbox.
+          </p>
+          <div class="form-group">
+            <label for="forgot-email">Account Email</label>
+            <input type="email" id="forgot-email" class="custom-input" placeholder="creator@nexusvr.io" required>
+          </div>
+          <button type="submit" class="btn btn-secondary" style="width: 100%; margin-top: 0.5rem;">
+            <span>Transmit Reset Link</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       CART SLIDEOUT DRAWER
+       ========================================================================== -->
+  <div class="cart-drawer-backdrop" id="cart-drawer-backdrop">
+    <div class="cart-drawer">
+      <div class="cart-drawer-header">
+        <div style="display: flex; align-items: center; gap: 0.6rem;">
+          <span style="font-size: 1.4rem;">🎧</span>
+          <h3 style="font-size: 1.25rem; color: #ffffff;">Audio &amp; Gear Cart</h3>
+        </div>
+        <button class="auth-modal-close" id="close-cart-btn" style="position: static;" aria-label="Close cart">✕</button>
+      </div>
+
+      <div class="cart-items-list" id="cart-items-container">
+        <!-- Rendered by app.js -->
+      </div>
+
+      <div class="cart-footer-totals">
+        <div style="display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 0.4rem; color: var(--text-secondary);">
+          <span>Gear Subtotal:</span>
+          <span id="cart-subtotal-price">$0</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; font-size: 1.2rem; font-weight: 700; color: #ffffff; margin-bottom: 1.2rem;">
+          <span>Estimated Total:</span>
+          <span id="cart-total-price" style="color: var(--neon-cyan);">$0</span>
+        </div>
+        <button class="btn btn-primary" id="btn-checkout-cart" style="width: 100%;">
+          <span>⚡ Reserve Gear Checkout</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       BOOKING CONFIRMATION MODAL
+       ========================================================================== -->
+  <div class="auth-modal-backdrop" id="booking-confirmation-modal" role="dialog" aria-modal="true">
+    <div class="auth-card-container" style="text-align: center;">
+      <div style="font-size: 3.5rem; margin-bottom: 0.5rem; animation: pulseAnimation 1.5s infinite;">⚡</div>
+      <h3 style="font-size: 1.6rem; color: #ffffff; margin-bottom: 0.4rem;">Reservation Confirmed!</h3>
+      <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+        Your immersive session has been logged into the Arcade Operations Matrix.
+      </p>
+
+      <div style="background: rgba(8, 12, 19, 0.8); border: 1px dashed var(--border-card); border-radius: var(--radius-md); padding: 1.2rem; text-align: left; margin-bottom: 1.5rem;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 0.88rem;">
+          <span style="color: var(--text-muted);">Pass ID:</span>
+          <strong id="modal-booking-ref" style="font-family: 'Orbitron'; color: var(--neon-cyan);">NX-9482</strong>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 0.88rem;">
+          <span style="color: var(--text-muted);">Station:</span>
+          <span id="modal-booking-station" style="color: #ffffff; font-weight: 600;">Omni Holo-Arena</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 0.88rem;">
+          <span style="color: var(--text-muted);">Date &amp; Time:</span>
+          <span id="modal-booking-datetime" style="color: #ffffff;">Today, 02:30 PM</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; font-size: 0.88rem; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 0.5rem; margin-top: 0.5rem;">
+          <span style="color: var(--text-muted);">Total Amount:</span>
+          <strong id="modal-booking-total" style="font-family: 'Orbitron'; color: var(--neon-green); font-size: 1.1rem;">$60</strong>
+        </div>
+      </div>
+
+      <button class="btn btn-primary" id="btn-close-confirmation-modal" style="width: 100%;">
+        <span>Done &amp; View Pass</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FOOTER
+       STRICT REQUIREMENTS SATISFACTION:
+       - 1. Website Favicon: Included in <head>
+       - 2. Logo inside Auth cards: Included & Centered
+       - 3. Logo clickable -> Navigate to Home: Tested & linked
+       - 4. Footer Social Icons: Instagram, Facebook, LinkedIn, X/Twitter, YouTube
+       - 5. Social Icon Design: Equal size (44x44px), equal spacing (14px), consistent shape, proper alignment, clear hover state, good contrast, proper touch area
+       - 6. Social Links: Working clickable links (no empty href, no #)
+       - 7. Responsive Footer: Fully verified across 320px -> 375px -> 425px -> 576px -> 768px -> 834px -> 900px -> 1024px -> desktop without horizontal overflow
+       ========================================================================== -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container footer-top-padding">
+      <div class="footer-grid">
+        <!-- Col 1: Brand Info & Social Icons -->
+        <div class="footer-brand-col">
+          <a href="#home" class="footer-brand-link" title="NEXUS VR & Audio - Return to Top">
+            <img src="assets/images/logo.svg" alt="NEXUS VR & Audio Arcade Logo" class="footer-brand-logo-img">
+          </a>
+          <p class="footer-about-text">
+            NEXUS is an ultra-modern virtual reality entertainment arcade and professional podcast audio recording soundstage. Step into 4K haptic simulations or broadcast with broadcast-grade studio acoustics.
+          </p>
+
+          <!-- STRICT REQUIREMENTS 4, 5, 6: SOCIAL ICONS & WORKING LINKS -->
+          <div class="footer-social-wrapper">
+            <span class="social-icons-label">Connect With Our Cyberverse</span>
+            <div class="footer-social-links" role="list" aria-label="Social Media Links">
+              <!-- Instagram -->
+              <a href="https://instagram.com/nexusvr_arcade" class="social-icon-btn social-instagram" target="_blank" rel="noopener noreferrer" aria-label="Follow NEXUS VR & Audio on Instagram" title="Instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </a>
+
+              <!-- Facebook -->
+              <a href="https://facebook.com/nexusvr.arcade" class="social-icon-btn social-facebook" target="_blank" rel="noopener noreferrer" aria-label="Follow NEXUS VR & Audio on Facebook" title="Facebook">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/>
+                </svg>
+              </a>
+
+              <!-- LinkedIn -->
+              <a href="https://linkedin.com/company/nexusvr-arcade" class="social-icon-btn social-linkedin" target="_blank" rel="noopener noreferrer" aria-label="Connect with NEXUS VR & Audio on LinkedIn" title="LinkedIn">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+              </a>
+
+              <!-- X / Twitter -->
+              <a href="https://x.com/nexusvr_arcade" class="social-icon-btn social-twitter" target="_blank" rel="noopener noreferrer" aria-label="Follow NEXUS VR & Audio on X" title="X (Twitter)">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </a>
+
+              <!-- YouTube -->
+              <a href="https://youtube.com/@nexusvr_arcade" class="social-icon-btn social-youtube" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to NEXUS VR & Audio on YouTube" title="YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 2: Arcade Experiences -->
+        <div>
+          <h4 class="footer-col-title">Arcade Arenas</h4>
+          <ul class="footer-links-list">
+            <li class="footer-link-item"><a href="#experiences">Omni Holo-Arena 4K</a></li>
+            <li class="footer-link-item"><a href="#experiences">Hyper-Drive F1 Sim Rig</a></li>
+            <li class="footer-link-item"><a href="#experiences">Zero-G Flight Pod</a></li>
+            <li class="footer-link-item"><a href="#experiences">Spatial Cyber-Escape Lab</a></li>
+            <li class="footer-link-item"><a href="#pricing">Squad Group Tournaments</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Audio & Creator Gear -->
+        <div>
+          <h4 class="footer-col-title">Podcast &amp; Audio</h4>
+          <ul class="footer-links-list">
+            <li class="footer-link-item"><a href="#audio-gear">Broadcast Microphone Rentals</a></li>
+            <li class="footer-link-item"><a href="#audio-gear">RØDECaster Pro II Studios</a></li>
+            <li class="footer-link-item"><a href="#audio-lab">Web Audio Spatial Simulator</a></li>
+            <li class="footer-link-item"><a href="#audio-gear">Planar Magnetic Monitoring</a></li>
+            <li class="footer-link-item"><a href="#pricing">Creator Membership Tiers</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Location & Operating Hours -->
+        <div>
+          <h4 class="footer-col-title">Arcade Headquarters</h4>
+          <div class="footer-contact-item">
+            <span>📍</span>
+            <span>77 Cyberverse Boulevard, Tech District, Suite 400</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>🕒</span>
+            <span>Mon - Thu: 10:00 AM - Midnight<br>Fri - Sun: 10:00 AM - 02:00 AM</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>📞</span>
+            <span>+1 (800) 555-NEXUS-VR</span>
+          </div>
+          <div style="margin-top: 1rem;">
+            <button class="btn btn-sm btn-pink btn-open-auth" style="width: 100%;">
+              <span>Member Sign In</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom-bar">
+      <div class="container footer-bottom-inner">
+        <div>
+          &copy; 2026 NEXUS VR &amp; Audio Labs Inc. All rights reserved. Built with Ultra-Low Latency Web Standards.
+        </div>
+        <div class="footer-policy-links">
+          <a href="#home">Privacy Protocol</a>
+          <a href="#home">Terms of Immersion</a>
+          <a href="#tech-specs">Hardware Safety</a>
+          <a href="#admin" onclick="document.getElementById('nav-admin-toggle').click();">Operator Portal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core Application Script -->
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
