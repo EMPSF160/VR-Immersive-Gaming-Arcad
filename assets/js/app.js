@@ -778,6 +778,21 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
+    // Social Quick Connect & Sign-In buttons
+    document.querySelectorAll('.auth-social-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const provider = btn.dataset.provider || 'Social';
+        state.currentUser = {
+          name: `${provider} Pilot`,
+          email: `pilot@${provider.toLowerCase()}-cyber.io`,
+          role: 'creator'
+        };
+        updateUserNav();
+        if (authBackdrop) authBackdrop.classList.remove('active');
+        showToast(`Authorized via ${provider} Identity successfully!`, 'success');
+      });
+    });
+
     function updateUserNav() {
       const authBtnText = document.getElementById('nav-user-label');
       const userDot = document.getElementById('nav-user-dot');
@@ -1033,6 +1048,122 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
     });
+
+    // --- ACTIVE STATE MENU HIGHLIGHTING FOR NAVLINKS (ScrollSpy & Instant Click) ---
+    const primaryNavLinks = document.querySelectorAll('.nav-menu .nav-link');
+    const sectionsToTrack = [];
+
+    primaryNavLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      if (href && href.startsWith('#') && href.length > 1) {
+        const targetId = href.substring(1);
+        const sectionEl = document.getElementById(targetId);
+        if (sectionEl) {
+          sectionsToTrack.push({ id: targetId, href, link, element: sectionEl });
+        }
+      }
+    });
+
+    function setActiveNavLink(targetHref) {
+      primaryNavLinks.forEach(link => {
+        if (link.getAttribute('href') === targetHref) {
+          link.classList.add('active');
+          link.setAttribute('aria-current', 'page');
+        } else {
+          link.classList.remove('active');
+          link.removeAttribute('aria-current');
+        }
+      });
+    }
+
+    // Immediate active highlight on click
+    primaryNavLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        const href = link.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          setActiveNavLink(href);
+        }
+      });
+    });
+
+    // Clear active highlight when clicking brand logo (returns to top home)
+    const brandLogoLink = document.getElementById('header-brand-logo');
+    if (brandLogoLink) {
+      brandLogoLink.addEventListener('click', () => {
+        primaryNavLinks.forEach(l => {
+          l.classList.remove('active');
+          l.removeAttribute('aria-current');
+        });
+      });
+    }
+
+    // High performance scrollspy using requestAnimationFrame
+    let isScrollTicking = false;
+    function updateActiveNavScroll() {
+      const scrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const docHeight = document.documentElement.scrollHeight;
+      const headerOffset = 120; // Accounts for header height + visual threshold
+
+      // Bottom of page: activate last item (FAQ & Reviews)
+      if (scrollY + windowHeight >= docHeight - 40) {
+        if (sectionsToTrack.length > 0) {
+          setActiveNavLink(sectionsToTrack[sectionsToTrack.length - 1].href);
+        }
+        return;
+      }
+
+      // Top of page (in hero): clear active state
+      if (scrollY < 180) {
+        primaryNavLinks.forEach(l => {
+          l.classList.remove('active');
+          l.removeAttribute('aria-current');
+        });
+        return;
+      }
+
+      // Check which section is in viewport
+      let activeSection = null;
+      for (let i = 0; i < sectionsToTrack.length; i++) {
+        const item = sectionsToTrack[i];
+        const rect = item.element.getBoundingClientRect();
+        const top = rect.top + scrollY;
+        const height = item.element.offsetHeight;
+
+        if (scrollY >= top - headerOffset && scrollY < top + height - headerOffset) {
+          activeSection = item;
+          break;
+        }
+      }
+
+      if (activeSection) {
+        setActiveNavLink(activeSection.href);
+      }
+    }
+
+    window.addEventListener('scroll', () => {
+      if (!isScrollTicking) {
+        window.requestAnimationFrame(() => {
+          updateActiveNavScroll();
+          isScrollTicking = false;
+        });
+        isScrollTicking = true;
+      }
+    }, { passive: true });
+
+    // Handle hash change if navigating by URL hash
+    window.addEventListener('hashchange', () => {
+      if (window.location.hash) {
+        setActiveNavLink(window.location.hash);
+      }
+    });
+
+    // Run once on load to set initial state if scrolled or hashed
+    if (window.location.hash) {
+      setActiveNavLink(window.location.hash);
+    } else {
+      updateActiveNavScroll();
+    }
 
     // Check URL Hash for direct admin or auth opening
     if (window.location.hash === '#admin') {

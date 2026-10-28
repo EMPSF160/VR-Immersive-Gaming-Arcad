@@ -322,33 +322,54 @@ button {
   color: var(--text-secondary);
   text-decoration: none;
   position: relative;
-  padding: 0.42rem 0.65rem;
+  padding: 0.42rem 0.75rem;
   white-space: nowrap; /* Ensures links NEVER break onto two stacked lines */
   border-radius: var(--radius-sm);
-  transition: all 0.22s ease;
+  transition: all 0.24s cubic-bezier(0.16, 1, 0.3, 1);
   display: inline-flex;
   align-items: center;
   line-height: 1.2;
+  border: 1px solid transparent;
 }
 .nav-link::after {
   content: '';
   position: absolute;
-  bottom: 0;
-  left: 0.65rem;
-  right: 0.65rem;
+  bottom: -2px;
+  left: 0.5rem;
+  right: 0.5rem;
   height: 2px;
   background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple));
-  transition: opacity 0.25s ease;
+  transition: all 0.25s ease;
   border-radius: 2px;
   opacity: 0;
+  transform: scaleX(0.7);
 }
-.nav-link:hover, .nav-link.active {
+.nav-link:hover {
   color: #ffffff;
   background: rgba(0, 243, 255, 0.08);
+  border-color: rgba(0, 243, 255, 0.22);
   text-shadow: 0 0 10px rgba(0, 243, 255, 0.4);
 }
-.nav-link:hover::after, .nav-link.active::after {
+.nav-link:hover::after {
   opacity: 1;
+  transform: scaleX(1);
+}
+/* Enhanced Active State Header Navlink Highlighting */
+.nav-link.active {
+  color: #00f3ff;
+  background: rgba(0, 243, 255, 0.14);
+  border-color: rgba(0, 243, 255, 0.45);
+  box-shadow: 0 0 14px rgba(0, 243, 255, 0.28), inset 0 0 8px rgba(0, 243, 255, 0.12);
+  text-shadow: 0 0 10px rgba(0, 243, 255, 0.75);
+  font-weight: 700;
+}
+.nav-link.active::after {
+  opacity: 1;
+  transform: scaleX(1);
+  height: 3px;
+  bottom: -2px;
+  background: linear-gradient(90deg, var(--neon-cyan), var(--neon-pink));
+  box-shadow: 0 0 10px var(--neon-cyan), 0 0 4px var(--neon-pink);
 }
 
 /* Header Action Tools */
@@ -1768,6 +1789,91 @@ button {
   background: rgba(0, 243, 255, 0.15);
 }
 
+/* Auth Social Quick Identity & Community Styling */
+.auth-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 1.15rem 0 0.85rem 0;
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.auth-divider::before, .auth-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.auth-divider:not(:empty)::before {
+  margin-right: 0.85rem;
+}
+.auth-divider:not(:empty)::after {
+  margin-left: 0.85rem;
+}
+
+.auth-social-login-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.65rem;
+  margin-bottom: 0.4rem;
+}
+.auth-social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 0.5rem;
+  border-radius: var(--radius-sm);
+  background: rgba(18, 25, 38, 0.9);
+  border: 1px solid var(--border-card);
+  color: #e2eaf4;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+.auth-social-btn:hover {
+  border-color: var(--neon-cyan);
+  background: rgba(24, 35, 54, 0.95);
+  color: #ffffff;
+  box-shadow: 0 0 14px rgba(0, 243, 255, 0.3);
+  transform: translateY(-2px);
+}
+.auth-social-btn.auth-social-discord:hover {
+  border-color: #5865F2;
+  box-shadow: 0 0 14px rgba(88, 101, 242, 0.4);
+}
+.auth-social-btn.auth-social-x:hover {
+  border-color: #ffffff;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+}
+
+.auth-social-community-section {
+  margin-top: 1.5rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+}
+.auth-social-community-label {
+  display: block;
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #8fa5bf;
+  margin-bottom: 0.85rem;
+}
+.auth-social-icons-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px; /* Strict Requirement: Equal spacing */
+  flex-wrap: wrap;
+}
+
 /* ==========================================================================
    CART SLIDEOUT DRAWER
    ========================================================================== */
@@ -2069,9 +2175,20 @@ button {
    ========================================================================== */
 
 @media (max-width: 1024px) {
+  /* REQUIREMENT 3: For 1024px increase left & right padding for footer since it's touching at edge */
+  .site-footer {
+    padding-left: clamp(2rem, 4vw, 3.5rem);
+    padding-right: clamp(2rem, 4vw, 3.5rem);
+  }
+  .site-footer .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    max-width: 100%;
+  }
+
   .footer-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 2.5rem;
   }
   .booking-layout-grid {
     grid-template-columns: 1fr;
@@ -2117,6 +2234,18 @@ button {
     transform: translateY(0);
     opacity: 1;
     pointer-events: auto;
+  }
+  .nav-menu .nav-link {
+    width: 100%;
+    padding: 0.65rem 0.95rem;
+    font-size: 0.98rem;
+    border-radius: var(--radius-sm);
+  }
+  .nav-menu .nav-link.active {
+    background: rgba(0, 243, 255, 0.16);
+    border-left: 3px solid var(--neon-cyan);
+    color: #ffffff;
+    box-shadow: 0 0 14px rgba(0, 243, 255, 0.28);
   }
 
   .mobile-actions-wrapper {
@@ -2206,6 +2335,14 @@ button {
 }
 
 @media (max-width: 576px) {
+  .site-footer {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .site-footer .container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
   .container {
     padding: 0 1rem;
   }
