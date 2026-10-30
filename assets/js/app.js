@@ -686,7 +686,10 @@ document.addEventListener('DOMContentLoaded', () => {
         tab.classList.add('active');
         const targetFormId = tab.dataset.targetForm;
         const targetForm = document.getElementById(targetFormId);
-        if (targetForm) targetForm.style.display = 'flex';
+        if (targetForm) {
+          targetForm.style.display = 'flex';
+          targetForm.style.flexDirection = 'column';
+        }
       });
     });
 
